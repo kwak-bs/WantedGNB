@@ -100,10 +100,12 @@
   padding-left:0;
 }
 
+.navbar_li.selected{
+  box-shadow: inset 0 -2px #258bf7;
+}
 
-
-.navbar_li.seleted {
-  box-shadow: inset 0 -2px #445161;
+.navbar_li.selected:hover {
+  color:lawngreen;
 }
 
 .aside_ul {
