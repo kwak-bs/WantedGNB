@@ -1,0 +1,28 @@
+.aside_ul {
+  padding-left: 0;
+}
+.aside_li {
+  display: inline-block;
+  height: inherit;
+}
+
+.searchButton, .notiButton,.accButton {
+  background-color: white;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.svcButton {
+  cursor: pointer;
+  width: max-content;
+  color: #666;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 10px;
+  background-color: white;
+  margin: 0 0 0 15px;
+  font-weight: 400;
+  font-size: 13px;
+  border: 1px solid #e1e2e3;
+}
