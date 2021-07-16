@@ -5,9 +5,14 @@ import "../css/Navbar.css";
 
 const NavBar = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isHover, setIsHover] = useState(false);
 
   const tabClickHandler = (index) => {
     setSelectedIndex(index);
+  };
+
+  const mouseHoverHandler = () => {
+    setIsHover(!isHover);
   };
 
   const tabArray = [
@@ -16,6 +21,8 @@ const NavBar = () => {
         <li
           className={selectedIndex === 0 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(0)}
+          onMouseEnter={mouseHoverHandler}
+         // onMouseLeave={mouseHoverHandler}
         >
           탐색
         </li>
@@ -94,7 +101,7 @@ const NavBar = () => {
         </div>
       </div>
       <div className="tabList_hover">
-        {tabArray[selectedIndex].tabListHover}
+        {isHover && tabArray[selectedIndex].tabListHover}
       </div>
     </>
   );

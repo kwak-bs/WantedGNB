@@ -1,0 +1,70 @@
+.overlay_list_container {
+  position: fixed;
+  top : 50px;
+  left: 0;
+  right: 0;
+  bottom : 0;
+  background-color: rgba(0,0,0,.4);;
+  height: auto;
+  opacity: 1;
+  transition: 5s;
+
+}
+
+.overlay_content {
+  position: relative;
+  height: 100%;
+  max-height: 500px;
+  background-color: white;
+  transition: 5s;
+}
+
+.table_container {
+  margin: 0 auto;
+  max-width: 1060px;
+}
+
+.table_row {
+  margin: 0;
+}
+
+.table_col {
+  float: left;
+  width: 14.78%;
+  height: 270px;
+  padding: 40px 20px 0 0;
+  text-align: left;
+}
+
+.table_col>a {
+  text-decoration: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.icon_arrow{
+  float:right;
+}
+
+.table_col>a>h2 {
+  width: 100%;
+  color: black;
+  font-size: 17px;
+  line-height: 20px;
+  vertical-align: top;
+  margin: 0;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table_col>a>h3 {
+  color: #999;
+  width: 100%;
+  font-size: 13px;
+  margin: 0;
+  padding: 5px 20px 5px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
