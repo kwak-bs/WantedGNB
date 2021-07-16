@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import SearchTabList from "./SeacrchTabList";
+import NavbarAside from "./NavbarAside";
 import "../css/Navbar.css";
-import { MdSearch, MdNotifications, MdAccountCircle } from "react-icons/md";
 
 const NavBar = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const tabClickHandler = (index) => {
     setSelectedIndex(index);
-    console.log(index + " 클릭됨");
   };
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const tabArray = [
     {
@@ -19,6 +20,7 @@ const NavBar = () => {
           탐색
         </li>
       ),
+      tabList: <SearchTabList />,
     },
     {
       tabTitle: (
@@ -72,45 +74,27 @@ const NavBar = () => {
     },
   ];
   return (
-    <div role="navigation" className="nav_container">
-      <div className="nav_container_flex">
-        <nav className="navbar_main">
-          <div className="navbar_name_container">
-            <h1 className="navbar_name">wanted</h1>
-          </div>
-          <ul className="navbar_ul">
-            {tabArray.map((section, index) => {
-              return section.tabTitle;
-            })}
-          </ul>
-
-          <aside className="navbar_aside">
-            <ul className="aside_ul">
-              <li className="aside_li">
-                <button type="button" className="searchButton">
-                  <MdSearch size="20" color="black" />
-                </button>
-              </li>
-              <li className="aside_li">
-                <button type="button" className="notiButton">
-                  <MdNotifications size="20" color="black" />
-                </button>
-              </li>
-              <li className="aside_li">
-                <button type="button" className="accButton">
-                  <MdAccountCircle size="20" color="black" />
-                </button>
-              </li>
-              <li className="aside_li">
-                <button type="button" className="svcButton">
-                  기업 서비스
-                </button>
-              </li>
+    <>
+      <div role="navigation" className="nav_container">
+        <div className="nav_container_flex">
+          <nav className="navbar_main">
+            <div className="navbar_name_container">
+              <h1 className="navbar_name">wanted</h1>
+            </div>
+            <ul className="navbar_ul">
+              {tabArray.map((section, index) => {
+                return section.tabTitle;
+              })}
             </ul>
-          </aside>
-        </nav>
+
+            <aside className="navbar_aside">
+              <NavbarAside />
+            </aside>
+          </nav>
+        </div>
       </div>
-    </div>
+      <div className="tabList">{tabArray[selectedIndex].tabList}</div>
+    </>
   );
 };
 
