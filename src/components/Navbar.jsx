@@ -4,16 +4,28 @@ import NavbarAside from "./NavbarAside";
 import "../css/Navbar.css";
 
 const NavBar = () => {
+  // 탭 선택 인덱스
   const [selectedIndex, setSelectedIndex] = useState(0);
+  // 탭 호버 인덱스
+  const [hoverIndex, setHoverIndex] = useState(0);
+  // 마우스 호버 여부
   const [isHover, setIsHover] = useState(false);
 
   const tabClickHandler = (index) => {
     setSelectedIndex(index);
   };
 
-  const mouseHoverHandler = () => {
-    setIsHover(!isHover);
+  const mouseEnterHandler = (event) => {
+    setIsHover(true);
+    setHoverIndex(event.target.id);
   };
+
+  const hoverOutHandler = () => {
+    if (isHover) {
+      setIsHover(false);
+    }
+  };
+
 
   const tabArray = [
     {
@@ -21,19 +33,24 @@ const NavBar = () => {
         <li
           className={selectedIndex === 0 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(0)}
-          onMouseEnter={mouseHoverHandler}
-         // onMouseLeave={mouseHoverHandler}
+          onMouseEnter={mouseEnterHandler}
+          id={0}
         >
           탐색
         </li>
       ),
-      tabListHover: <SearchTabList />,
+      tabListHover: <SearchTabList 
+      hoverOutHandler={hoverOutHandler}
+      isHover={isHover}
+      />,
     },
     {
       tabTitle: (
         <li
           className={selectedIndex === 1 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(1)}
+          onMouseEnter={hoverOutHandler}
+          id={1}
         >
           커리어 성장
         </li>
@@ -44,6 +61,8 @@ const NavBar = () => {
         <li
           className={selectedIndex === 2 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(2)}
+          onMouseEnter={hoverOutHandler}
+          id={2}
         >
           직군별 연봉
         </li>
@@ -54,6 +73,8 @@ const NavBar = () => {
         <li
           className={selectedIndex === 3 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(3)}
+          onMouseEnter={hoverOutHandler}
+          id={3}
         >
           이력서
         </li>
@@ -64,6 +85,8 @@ const NavBar = () => {
         <li
           className={selectedIndex === 4 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(4)}
+          onMouseEnter={hoverOutHandler}
+          id={4}
         >
           매치업
         </li>
@@ -74,6 +97,8 @@ const NavBar = () => {
         <li
           className={selectedIndex === 5 ? "navbar_li selected" : "navbar_li"}
           onClick={() => tabClickHandler(5)}
+          onMouseEnter={hoverOutHandler}
+          id={5}
         >
           프리랜서
         </li>
@@ -100,9 +125,7 @@ const NavBar = () => {
           </nav>
         </div>
       </div>
-      <div className="tabList_hover">
-        {isHover && tabArray[selectedIndex].tabListHover}
-      </div>
+      {tabArray[hoverIndex].tabListHover}
     </>
   );
 };
