@@ -4,19 +4,26 @@
   left: 0;
   right: 0;
   bottom : 0;
-  background-color: rgba(0,0,0,.4);;
-  height: auto;
-  opacity: 1;
-  transition: 5s;
+  background-color: rgba(0,0,0,.3);;
+  opacity: 0;
+  visibility:hidden;
+  transition: .2s;
+}
 
+.overlay_list_container.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .overlay_content {
-  position: relative;
-  height: 100%;
-  max-height: 500px;
+  height: 0;
+  max-height: 450px;
   background-color: white;
-  transition: 5s;
+  transition: .5s;
+}
+
+.overlay_content.show{
+  height: 100%;
 }
 
 .table_container {
