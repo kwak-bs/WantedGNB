@@ -104,10 +104,6 @@
   box-shadow: inset 0 -2px #258bf7;
 }
 
-.navbar_li.selected:hover {
-  color:lawngreen;
-}
-
 .aside_ul {
   padding-left: 0;
 }
