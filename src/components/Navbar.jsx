@@ -20,7 +20,7 @@ const NavBar = () => {
           탐색
         </li>
       ),
-      tabList: <SearchTabList />,
+      tabListHover: <SearchTabList />,
     },
     {
       tabTitle: (
@@ -93,7 +93,9 @@ const NavBar = () => {
           </nav>
         </div>
       </div>
-      <div className="tabList">{tabArray[selectedIndex].tabList}</div>
+      <div className="tabList_hover">
+        {tabArray[selectedIndex].tabListHover}
+      </div>
     </>
   );
 };
