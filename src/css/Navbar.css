@@ -5,16 +5,14 @@
   border-bottom: 1px solid #e1e2e3;
 }
 
-@media screen and (min-width:1200px){
-  .nav_container_flex {
-    position: relative;
-    margin: 0 auto;
-    height: 50px;
-    max-width: 1060px;
-  }
-
-  .navbar_li {
+.nav_container_flex {
   position: relative;
+  margin: 0 auto;
+  height: 50px;
+  max-width: 1060px;
+}
+
+.navbar_li {
   display: inline-block;
   height: inherit;
   font-size: 14px;
@@ -23,62 +21,7 @@
   padding: 15px;
   cursor: pointer;
 }
-}
 
-@media screen and (min-width:992px) and (max-width:1199px) {
-  .nav_container_flex {
-    margin: 0 auto;
-    height: 50px;
-    width: 90%;
-  }
-
-  .navbar_li {
-    position: relative;
-    display: inline-block;
-    height: inherit;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    padding: 15px;
-    cursor: pointer;
-  }
-}
-
-@media screen and (min-width:768px) and (max-width:991px) {
-  .nav_container_flex {
-    margin: 0 auto;
-    height: 50px;
-    width: 90%;
-  }
-
-  .navbar_li {
-    position: relative;
-    display: inline-block;
-    height: inherit;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    flex : 1;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .nav_container_flex {
-    margin: 0 auto;
-    height: 50px;
-  }
-  .navbar_li {
-    position: relative;
-    display: inline-block;
-    height: inherit;
-    justify-content: space-around;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-}
 .navbar_main {
   display: flex;
   justify-content: space-between;
@@ -106,4 +49,46 @@
 
 .navbar_li:hover {
   box-shadow: inset 0 -2px #999;
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .nav_container_flex {
+    margin: 0 auto;
+    height: 50px;
+    width: 95%;
+  }
+
+  .navbar_li {
+    display: inline-block;
+    height: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 15px 5px 15px 10px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .nav_container_flex {
+    margin: 0 auto;
+    height: 50px;
+  }
+  .navbar_name_container, 
+  .navbar_li.salary,
+  .navbar_li.resume,
+  .navbar_li.matchup,
+  .navbar_li.freelancer{
+    display: none;
+  }
+  .navbar_li {
+    display: inline-block;
+    height: inherit;
+    justify-content: space-around;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }

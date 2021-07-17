@@ -26,3 +26,9 @@
   font-size: 13px;
   border: 1px solid #e1e2e3;
 }
+
+@media screen and (max-width:767px) {
+  .svcButton {
+    display: none;
+  }
+}
