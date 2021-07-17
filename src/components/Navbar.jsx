@@ -26,31 +26,35 @@ const NavBar = () => {
     }
   };
 
-
   const tabArray = [
     {
       tabTitle: (
         <li
-          className={selectedIndex === 0 ? "navbar_li selected" : "navbar_li search"}
+          className={
+            selectedIndex === 0 ? "navbar_li selected" : "navbar_li search"
+          }
           onClick={() => tabClickHandler(0)}
           onMouseEnter={mouseEnterHandler}
           id={0}
+          key={0}
         >
           탐색
         </li>
       ),
-      tabListHover: <SearchTabList 
-      hoverOutHandler={hoverOutHandler}
-      isHover={isHover}
-      />,
+      tabListHover: (
+        <SearchTabList hoverOutHandler={hoverOutHandler} isHover={isHover} />
+      ),
     },
     {
       tabTitle: (
         <li
-          className={selectedIndex === 1 ? "navbar_li selected" : "navbar_li career"}
+          className={
+            selectedIndex === 1 ? "navbar_li selected" : "navbar_li career"
+          }
           onClick={() => tabClickHandler(1)}
           onMouseEnter={hoverOutHandler}
           id={1}
+          key={1}
         >
           커리어 성장
         </li>
@@ -59,10 +63,13 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 2 ? "navbar_li selected" : "navbar_li salary"}
+          className={
+            selectedIndex === 2 ? "navbar_li selected" : "navbar_li salary"
+          }
           onClick={() => tabClickHandler(2)}
           onMouseEnter={hoverOutHandler}
           id={2}
+          key={2}
         >
           직군별 연봉
         </li>
@@ -71,10 +78,13 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 3 ? "navbar_li selected" : "navbar_li resume"}
+          className={
+            selectedIndex === 3 ? "navbar_li selected" : "navbar_li resume"
+          }
           onClick={() => tabClickHandler(3)}
           onMouseEnter={hoverOutHandler}
           id={3}
+          key={3}
         >
           이력서
         </li>
@@ -83,10 +93,13 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 4 ? "navbar_li selected" : "navbar_li matchup"}
+          className={
+            selectedIndex === 4 ? "navbar_li selected" : "navbar_li matchup"
+          }
           onClick={() => tabClickHandler(4)}
           onMouseEnter={hoverOutHandler}
           id={4}
+          key={4}
         >
           매치업
         </li>
@@ -95,10 +108,13 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 5 ? "navbar_li selected" : "navbar_li freelancer"}
+          className={
+            selectedIndex === 5 ? "navbar_li selected" : "navbar_li freelancer"
+          }
           onClick={() => tabClickHandler(5)}
           onMouseEnter={hoverOutHandler}
           id={5}
+          key={5}
         >
           프리랜서
         </li>
