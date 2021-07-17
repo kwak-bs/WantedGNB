@@ -31,7 +31,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 0 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 0 ? "navbar_li selected" : "navbar_li search"}
           onClick={() => tabClickHandler(0)}
           onMouseEnter={mouseEnterHandler}
           id={0}
@@ -47,7 +47,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 1 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 1 ? "navbar_li selected" : "navbar_li career"}
           onClick={() => tabClickHandler(1)}
           onMouseEnter={hoverOutHandler}
           id={1}
@@ -59,7 +59,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 2 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 2 ? "navbar_li selected" : "navbar_li salary"}
           onClick={() => tabClickHandler(2)}
           onMouseEnter={hoverOutHandler}
           id={2}
@@ -71,7 +71,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 3 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 3 ? "navbar_li selected" : "navbar_li resume"}
           onClick={() => tabClickHandler(3)}
           onMouseEnter={hoverOutHandler}
           id={3}
@@ -83,7 +83,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 4 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 4 ? "navbar_li selected" : "navbar_li matchup"}
           onClick={() => tabClickHandler(4)}
           onMouseEnter={hoverOutHandler}
           id={4}
@@ -95,7 +95,7 @@ const NavBar = () => {
     {
       tabTitle: (
         <li
-          className={selectedIndex === 5 ? "navbar_li selected" : "navbar_li"}
+          className={selectedIndex === 5 ? "navbar_li selected" : "navbar_li freelancer"}
           onClick={() => tabClickHandler(5)}
           onMouseEnter={hoverOutHandler}
           id={5}
