@@ -33,6 +33,7 @@
   padding-bottom:5px;
   font-size: x-large;
   font-weight: 650;
+  cursor: pointer;
 }
 
 .navbar_ul {
