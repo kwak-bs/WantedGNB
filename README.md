@@ -1,31 +1,53 @@
-# Wanted 기술 과제
-> 프론트엔드 프리온보딩 코스 기술과제 - Wanted GNB 구현하기
+Wanted 기술 과제
 
+<br/>
 
-## 사용 라이브러리
+> 📌 **Wanted 프리온보딩 코스 (프론트 엔드) 기술 과제**
+>
+> 📗 **Wanted Global Navigation Bar 구현하기**
 
-1. `react-icons`
-    - 네이게이션 바 aside 섹션의 아이콘을 구현하기 위해서 사용했습니다.
+<br/>
 
-## 시연 영상
+#### 🎈[배포 링크](https://kwak-bs.github.io/WantedGNB/)
+
+<br/>
+
+## 📚 과제 요구 사항
+
+1. Wanted GNB(Global Navigation bar)를 React 기반으로 클론.
+
+   ![WantedGNBpro](https://user-images.githubusercontent.com/51367622/127294064-92c1dd3d-9059-479b-986d-7d3627eb59e3.png)
+
+<br/>
+
+## 👨‍💻 실행 방법
+
+### 설치 
+
+`yarn install`
+
+### 실행
+
+`yarn start`
+
+<br/>
+
+## 📽 시연 영상
 
 [노션 페이지 이동](https://www.notion.so/Wanted-eed0f8e5e14646a5afb0952f39e24749)
 
-## 구현 사항
+<br/>
 
-1. 원티드 GNB 구현
-    - 탐색 탭 SubNavigation 구현
-2. 반응형 (데스크 탑 : 1024px이상, 모바일 768px 이하 반응형 구현)
-    - Navigation bar
-    - SubNavigation
+## 🧐 구현 사항
 
-## 추가 구현 예정
+1. Wanted GNB 구현
+   - 탐색 Tab + SubNavigation 구현
+2. 반응형 구현 (데스트 탑 : 1024px, 모바일 768px 이하)
 
-1. 로그인 기능 
-    - 로그인 여부에 따라 달라지는 반응형 화면 구현.
+<br/>
 
-1. 검색 탭 기능
-    - 검색 탭 클릭 시 상단 헤더 반응형 화면 구현.
+##   ⚙ 사용 라이브러리 && API
 
-2. 모바일 기준 반응형 메뉴 바 구현
-    - 모바일 기준 px로 줄였을 시, 메뉴 바 추가 구현.
+1. `react-icons`
+   - 네이게이션 바 aside 섹션의 아이콘을 구현하기 위해서 사용했습니다.
+
